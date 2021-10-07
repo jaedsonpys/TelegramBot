@@ -65,4 +65,10 @@ def invalid_option(chat):
         text='Infelizemente não consegui entender sua solicitação. Tente novamente!\n\n/start: Reiniciar atendimento\n/menu: Ver menu\n/mensagem: Deixar uma avaliação, sugestão ou reclamação'
     )
 
-bot.infinity_polling()
+while True:
+    try:
+        bot.infinity_polling()
+    except:
+        continue
+    else:
+        break
